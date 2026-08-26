@@ -55,8 +55,7 @@ async function fetchUserStats() {
     try {
         const response = await fetch(`${BASE_URL}/auth/user/`, {
             headers: {
-                'Authorization': `Token ${token}`,
-                'ngrok-skip-browser-warning': 'true'
+                'Authorization': `Token ${token}`
             }
         });
 
@@ -94,7 +93,8 @@ function updateDashboardUI(user) {
     // Best Score
     // ==========================================
 
-    const scoreVal = document.getElementById('stat-best-score');
+    const scoreVal =
+        document.getElementById('stat-best-score');
 
     if (scoreVal) {
         const bestScore =
