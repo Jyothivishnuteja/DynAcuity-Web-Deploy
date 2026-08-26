@@ -451,6 +451,10 @@ async function submitResult(resultData) {
                 'todayMinutes',
                 todayMinutes
             );
+        } else {
+            const errData = await response.json().catch(() => ({}));
+            console.error('Error saving result:', response.status, errData);
+            alert(`Failed to save game score to server. Error ${response.status}: ${errData.detail || errData.error || 'Server error'}`);
         }
 
     } catch (error) {
@@ -458,6 +462,7 @@ async function submitResult(resultData) {
             'Error syncing result:',
             error
         );
+        alert(`Failed to save game score due to network error: ${error.message}`);
     }
 }
 
