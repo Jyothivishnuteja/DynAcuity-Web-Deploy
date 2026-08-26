@@ -5,7 +5,7 @@
  */
 
 // Use dynamic origin for local development, or hardcode ngrok for cross-origin if needed
-const BASE_URL = window.location.origin + '/api';
+const BASE_URL = 'https://dynacuity-backend.onrender.com/api';
 
 /**
  * Apply the saved theme to the document
