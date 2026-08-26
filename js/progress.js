@@ -36,9 +36,13 @@ async function fetchProgressData() {
             if (typeof renderResultsTable === 'function') {
                 renderResultsTable(results, 'historyTableContainer', 30); // Show last 30 in progress
             }
+        } else {
+            console.error('Failed to fetch progress data:', resultsRes.status, userRes.status);
+            alert(`Failed to load progress data from server. (Results Status: ${resultsRes.status}, User Status: ${userRes.status})`);
         }
     } catch (error) {
         console.error('Error fetching progress:', error);
+        alert(`Failed to load progress data due to network error: ${error.message}`);
     }
 }
 
