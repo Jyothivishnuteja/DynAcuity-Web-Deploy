@@ -8,13 +8,13 @@ async function fetchProgressData() {
     try {
         // Parallel fetch for results and user details
         const [resultsRes, userRes] = await Promise.all([
-            fetch(window.location.origin + '/api/results/', {
+            fetch(`${BASE_URL}/results/`, {
                 headers: {
                     'Authorization': `Token ${token}`,
                     'ngrok-skip-browser-warning': 'true'
                 }
             }),
-            fetch(window.location.origin + '/api/auth/user/', {
+            fetch(`${BASE_URL}/auth/user/`, {
                 headers: {
                     'Authorization': `Token ${token}`,
                     'ngrok-skip-browser-warning': 'true'

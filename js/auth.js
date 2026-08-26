@@ -8,7 +8,7 @@
 // BACKEND URL
 // ============================================================
 
-const BASE_URL = 'https://dynacuity-backend.onrender.com/api';
+const BASE_URL = 'https://dynacuity-backend-6.onrender.com/api';
 
 
 // ============================================================

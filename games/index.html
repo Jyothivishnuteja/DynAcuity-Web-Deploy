@@ -241,7 +241,7 @@
             const token = localStorage.getItem('dynacuity_token');
             if (token) {
                 try {
-                    const response = await fetch('../api/auth/user/', {
+                    const response = await fetch(BASE_URL + '/auth/user/', {
                         headers: {
                             'Authorization': `Token ${token}`,
                             'ngrok-skip-browser-warning': 'true'

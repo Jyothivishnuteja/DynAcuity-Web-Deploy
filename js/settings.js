@@ -1,4 +1,4 @@
-const API_BASE = window.location.origin + "/api";
+const API_BASE = "https://dynacuity-backend-6.onrender.com/api";
 
 // Available avatars to choose from
 const AVATAR_OPTIONS = [

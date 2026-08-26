@@ -65,6 +65,15 @@ async function fetchUserStats() {
             console.log('Dashboard Stats Updated:', user);
 
             updateDashboardUI(user);
+        } else if (response.status === 401) {
+            console.error('Invalid token, logging out...');
+            if (typeof logout === 'function') {
+                logout();
+            } else {
+                localStorage.removeItem('dynacuity_token');
+                localStorage.removeItem('dynacuity_user');
+                window.location.href = 'auth/login.html';
+            }
         } else {
             console.error(
                 'Dashboard Stats Fetch Error:',
