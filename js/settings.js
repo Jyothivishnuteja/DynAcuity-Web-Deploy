@@ -17,8 +17,7 @@ async function loadSettingsProfile() {
     try {
         const response = await fetch(`${API_BASE}/auth/user/`, {
             headers: {
-                'Authorization': `Token ${token}`,
-                'ngrok-skip-browser-warning': 'true'
+                'Authorization': `Token ${token}`
             }
         });
 
@@ -121,8 +120,7 @@ async function handleProfileUpdate(e) {
             method: 'PATCH',
             headers: {
                 'Authorization': `Token ${token}`,
-                'Content-Type': 'application/json',
-                'ngrok-skip-browser-warning': 'true'
+                'Content-Type': 'application/json'
             },
             body: JSON.stringify(payload)
         });

@@ -243,8 +243,7 @@
                 try {
                     const response = await fetch(BASE_URL + '/auth/user/', {
                         headers: {
-                            'Authorization': `Token ${token}`,
-                            'ngrok-skip-browser-warning': 'true'
+                            'Authorization': `Token ${token}`
                         }
                     });
                     if (response.ok) {

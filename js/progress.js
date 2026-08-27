@@ -10,14 +10,12 @@ async function fetchProgressData() {
         const [resultsRes, userRes] = await Promise.all([
             fetch(`${BASE_URL}/results/`, {
                 headers: {
-                    'Authorization': `Token ${token}`,
-                    'ngrok-skip-browser-warning': 'true'
+                    'Authorization': `Token ${token}`
                 }
             }),
             fetch(`${BASE_URL}/auth/user/`, {
                 headers: {
-                    'Authorization': `Token ${token}`,
-                    'ngrok-skip-browser-warning': 'true'
+                    'Authorization': `Token ${token}`
                 }
             })
         ]);
